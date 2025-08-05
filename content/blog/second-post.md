@@ -35,18 +35,49 @@ quisquam repellendus fuga est consequatur autem reiciendis.
 Some dummy code example:
 
 ```ruby
-module Store do
-  class Product
-    attr_accessor :name, :price
+defmodule Examples.SalesDocument do
+  @callback generate_number() :: String.t()
+  @callback calculate_total() :: float()
+  @callback print() :: :ok
+end
+defmodule Examples.Receipt do
+  @behaviour Examples.SalesDocument
 
-    def initialize(name, price)
-      @name = name
-      @price = price
-    end
+  @impl true
+  def generate_number do
+    "R-" <> :crypto.strong_rand_bytes(4) |> Base.encode16()
+  end
 
-    def display
-      "#{@name} costs $#{@price}"
-    end
+  @impl true
+  def calculate_total do
+    # Przykładowa logika obliczania sumy
+    100.0
+  end
+
+  @impl true
+  def print do
+    IO.puts("Printing receipt...")
+    :ok
+  end
+end
+defmodule Examples.Invoice do
+  @behaviour Examples.SalesDocument
+
+  @impl true
+  def generate_number do
+    "I-" <> :crypto.strong_rand_bytes(4) |> Base.encode16()
+  end
+
+  @impl true
+  def calculate_total do
+    # Przykładowa logika obliczania sumy z podatkiem
+    100.0 * 1.23
+  end
+
+  @impl true
+  def print do
+    IO.puts("Printing invoice...")
+    :ok
   end
 end
 ```
