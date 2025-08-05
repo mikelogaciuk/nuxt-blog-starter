@@ -34,23 +34,19 @@ quisquam repellendus fuga est consequatur autem reiciendis.
 
 Some dummy code example:
 
-```elixir
+```ruby
 module Store do
-defmodule Types.Shapes do
-  @type point :: {number, number}
-  @type shape :: :circle | :square | :triangle
+  class Product
+    attr_accessor :name, :price
 
-  @spec area(shape, number) :: number
-  def area(:circle, radius) do
-    :math.pi() * radius * radius
-  end
+    def initialize(name, price)
+      @name = name
+      @price = price
+    end
 
-  def area(:square, side) do
-    side * side
-  end
-
-  def area(:triangle, base, height) do
-    0.5 * base * height
+    def display
+      "#{@name} costs $#{@price}"
+    end
   end
 end
 ```
