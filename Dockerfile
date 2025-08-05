@@ -11,8 +11,9 @@ RUN npm run build
 FROM node:20-alpine AS production
 WORKDIR /app
 COPY --from=build /app/package*.json ./
+COPY --from=build /app/.output ./.output
 
 # ENV PORT=3000
 # EXPOSE 3000
 
-# CMD ["node", "server/index.js"]
+# CMD ["node", "server/index.mjs"]
