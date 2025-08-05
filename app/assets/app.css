@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+/* @import '@nuxt/ui'; */
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+  themes:
+    nord --default,
+    sunset;
+  /* prefix: 'd-'; */
+}
+
+/* Typography for Markdown Content */
+.prose h1 {
+  @apply text-4xl no-underline;
+}
+
+.prose h2 {
+  @apply text-3xl no-underline;
+}
+
+.prose h3 {
+  @apply text-2xl no-underline;
+}
+
+/* Ensure no-underline is applied correctly */
+.prose a {
+  @apply no-underline;
+}
+
+@theme {
+  --font-sans: 'Roboto Condensed', sans-serif;
+}
