@@ -95,3 +95,19 @@ tags: [nuxt, blog, starter]
 ---
 
 The title is taken from the # at the beginning of the file.
+
+## 💊 Tests
+
+For tests use [Vitest](https://vitest.dev/).
+
+It should work out of the box, with:
+
+```
+npm run test
+```
+
+If not, type:
+
+```shell
+npm i --save-dev @nuxt/test-utils vitest @vue/test-utils happy-dom playwright-core
+```
