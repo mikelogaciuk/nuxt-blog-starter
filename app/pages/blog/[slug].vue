@@ -25,7 +25,7 @@ const { data: post } = await useAsyncData(`blog-${slug}`, () => {
                 <h1 class="text-4xl">Page not found</h1>
                 <p class="mt-10">Sorry! The content you are looking for does not exist.</p>
                 <div class="mt-10">
-                    <NuxtLink class="front-semibold" to="/blog">Back to posts list</NuxtLink>
+                    <NuxtLink class="font-semibold" to="/blog">Back to posts list</NuxtLink>
                 </div>
             </div>
         </div>
