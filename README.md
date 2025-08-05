@@ -4,7 +4,7 @@ Minimalistic Nuxt.js blog starter template.
 
 ## 🚀 Modules used
 
-Startes uses the following Nuxt.js modules:
+Starter uses the following Nuxt.js modules:
 
 - [@nuxt/content](https://content.nuxtjs.org/) - for content management
 - [@nuxt/icon](https://nuxt.com/modules/icon) - for icons
@@ -18,7 +18,7 @@ Additionally, it uses the following packages:
 - [tailwindcss](https://tailwindcss.com/) - for styling
 - [prettier](https://prettier.io/) - for code formatting
 
-It also has enabled markdown highlighting with [shiki](https://shiki.matsu.io/) for languges like `js`, `ts`, `vue`, `html`, and `css`, `ruby`, `python`, `elixir` and others.
+It also has enabled markdown highlighting with [shiki](https://shiki.matsu.io/) for languages like `js`, `ts`, `vue`, `html`, and `css`, `ruby`, `python`, `elixir` and others.
 
 The config can be found in `nuxt.config.ts` and `content.config.ts`.
 
