@@ -93,8 +93,9 @@ You can use the following frontmatter to define the post metadata:
 date: 2023-10-01
 tags: [nuxt, blog, starter]
 ---
+```
 
-The title is taken from the # at the beginning of the file.
+The title is taken from the `h1` in the Markdown at the beginning of the file.
 
 ## 💊 Tests
 
@@ -102,7 +103,7 @@ For tests use [Vitest](https://vitest.dev/).
 
 It should work out of the box, with:
 
-```
+```shell
 npm run test
 ```
 
